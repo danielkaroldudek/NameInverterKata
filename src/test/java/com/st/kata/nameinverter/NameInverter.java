@@ -21,7 +21,7 @@ public class NameInverter {
 class StringHelper {
 
     public static String createInvertedString(ArrayList<String> splitName) {
-        splitName.removeIf(n -> "Pan".equals(n));
+        splitName.removeIf("Pan"::equals);
         return String.format("%s, %s", splitName.get(1), splitName.get(0));
     }
 
