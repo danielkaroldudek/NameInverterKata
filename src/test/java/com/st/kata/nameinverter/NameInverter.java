@@ -5,8 +5,6 @@ import org.assertj.core.util.Lists;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class NameInverter {
 
@@ -31,8 +29,7 @@ class StringHelper {
     }
 
     private static ArrayList<String> revertList(ArrayList<String> splitName) {
-        return Lists.newArrayList(splitName.stream()
-                .collect(Collectors.toCollection(LinkedList::new))
+        return Lists.newArrayList(new LinkedList<>(splitName)
                 .descendingIterator());
     }
 
