@@ -58,4 +58,10 @@ public class NameInverterTest {
         assertThat(inverted).isEqualTo("Kowalska, Janina, Dr");
     }
 
+    @Test
+    void shouldReturnInvertedFirstLastNameWithTitles() {
+        String inverted = nameInverter.invert("mgr inż. Gracjan Kowalski");
+        assertThat(inverted).isEqualTo("Kowalski, Gracjan, inż., mgr");
+    }
+
 }
