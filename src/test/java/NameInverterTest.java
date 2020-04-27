@@ -1,5 +1,4 @@
-package com.st.kata.nameinverter;
-
+import com.st.kata.nameinverter.NameInverter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
